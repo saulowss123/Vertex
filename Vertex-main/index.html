@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente virtual Caio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css"> <!-- Seu CSS personalizado -->
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Menu lateral -->
+        <div class="sidebar">
+            <button id="newChatButton" class="btn btn-primary" onclick="createNewChat()">Criar Chat</button>
+            <button id="clearChatButton" class="btn btn-danger" onclick="clearChat()">Limpar Chat</button>
+        </div>
+
+        <!-- Container do chat -->
+        <div class="chat-container">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h4>Assistente virtual Caio</h4>
+                    <ul class="nav nav-tabs" id="chatTabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" onclick="switchChat(0)">Chat 1</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="chatboxContainer">
+                    <div id="chatbox-0" class="chatbox">
+                        <!-- Mensagens do chat serão inseridas aqui -->
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="input-container">
+                        <input type="text" id="userInput" class="form-control" placeholder="Pergunte o que quiser...">
+                        <button class="btn btn-success" onclick="sendMessage()">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/scripts/script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

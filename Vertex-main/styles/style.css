@@ -1,0 +1,186 @@
+/* Estilos gerais */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+/* Container principal */
+.container-fluid {
+    display: flex;
+}
+
+/* Menu lateral */
+.sidebar {
+    height: 100vh;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Botão de criar novo chat */
+#newChatButton {
+    margin-bottom: 20px;
+    background-color: #007bff;
+}
+
+/* Container do chat */
+.chat-container {
+    width: 60%;
+    margin-left: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container de chats */
+#chatboxContainer {
+    height: 100px;
+    flex: 1; /* Faz o container ocupar o espaço restante */
+    overflow: hidden; /* Isso evita que o conteúdo empurre o chat para baixo */
+}
+
+/* Caixa de chat */
+.chatbox {
+    padding: 20px;
+    height: 100%; /* Faz o chatbox ocupar toda a altura do container */
+    overflow-y: auto; /* Permite rolagem vertical */
+    display: none; /* Oculta chatboxes inicialmente */
+   
+}
+
+/* Estilo das mensagens */
+.chatbox .user {
+    background-color: #57575a;
+    color: white;
+    text-align: left;
+    margin-left: auto;
+    margin-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.5);
+    border-radius: 2px;
+}
+
+.chatbox .assistant {
+    background-color: #e2e2e2;
+    color: black;
+    text-align: left;
+    margin-right: auto;
+    margin-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+/* Container de entrada */
+.input-container {
+    display: flex;
+    padding: 10px;
+}
+
+/* Estilo do input */
+input[type="text"] {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 25px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* Estilo do botão */
+button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Efeito hover do botão */
+button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Estilos para telas menores que 768px (celulares) */
+@media (max-width: 768px) {
+    .chatbox {
+        padding: 10px;
+        height: 300px; /* Reduz a altura no celular */
+        font-size: 14px; /* Reduz o tamanho da fonte para caber melhor */
+    }
+
+    .chat-container {
+        width: 100%; /* Ocupar toda a largura da tela no celular */
+        margin-left: 0; /* Remove o espaçamento lateral */
+        border-radius: 0; /* Remove os cantos arredondados para um layout mais limpo */
+    }
+
+    /* Ajusta o menu lateral para telas pequenas, caso seja necessário */
+    .sidebar {
+        width: 30%; /* Reduz a largura do menu lateral */
+    }
+
+    /* Reduz os botões e o input no celular */
+    .input-container input[type="text"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+/* Card (se aplicável) */
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.card-body {
+    flex: 1; /* Faz com que o conteúdo principal ocupe o espaço restante */
+    padding: 20px; /* Espaçamento interno */
+    overflow-y: auto; /* Habilita rolagem, caso o conteúdo cresça */
+}
+
+.card-footer {
+    
+    justify-content: space-between;
+    background-color: rgb(97, 95, 95);
+    color: #fff; /* Cor do texto para contraste */
+    padding: 10px;
+}
+
+/* Efeito de hover nas abas dos chats */
+.nav-link {
+    transition: background-color 0.3s, color 0.3s; /* Suaviza a transição das cores */
+}
+
+.nav-link:hover {
+    background-color: #e7f1ff; /* Cor de fundo quando o mouse está sobre a aba */
+    color: #007bff; /* Cor do texto quando o mouse está sobre a aba */
+}
+
+/* Efeito de hover nas abas ativas */
+.nav-item:hover {
+    background-color: #007bff; /* Cor de fundo quando o mouse está sobre a aba ativa */
+}
+
